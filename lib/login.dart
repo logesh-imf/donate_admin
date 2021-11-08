@@ -114,39 +114,39 @@ class _LoginState extends State<Login> {
                                 ? const CircularProgressIndicator()
                                 : ElevatedButton(
                                     onPressed: () async {
-                                      _loginKey.currentState?.save();
-                                      if (_loginKey.currentState!.validate()) {
-                                        setState(() {
-                                          load = true;
-                                        });
+                                      // _loginKey.currentState?.save();
+                                      // if (_loginKey.currentState!.validate()) {
+                                      //   setState(() {
+                                      //     load = true;
+                                      //   });
 
-                                        var credential =
-                                            FirebaseLogin(email, pass);
-                                        await credential.login();
+                                      //   var credential =
+                                      //       FirebaseLogin(email, pass);
+                                      //   await credential.login();
 
-                                        if (credential.isAdminExist) {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const Homepage()));
-                                        } else {
-                                          ScaffoldMessenger.of(context)
-                                              .showSnackBar(const SnackBar(
-                                                  content: Text(
-                                                      'Admin is not exst')));
-                                        }
+                                      //   if (credential.isAdminExist) {
+                                      //     Navigator.push(
+                                      //         context,
+                                      //         MaterialPageRoute(
+                                      //             builder: (context) =>
+                                      //                 const Homepage()));
+                                      //   } else {
+                                      //     ScaffoldMessenger.of(context)
+                                      //         .showSnackBar(const SnackBar(
+                                      //             content: Text(
+                                      //                 'Admin is not exst')));
+                                      //   }
 
-                                        setState(() {
-                                          load = false;
-                                        });
-                                      }
+                                      //   setState(() {
+                                      //     load = false;
+                                      //   });
+                                      // }
 
-                                      // Navigator.push(
-                                      //     context,
-                                      //     MaterialPageRoute(
-                                      //         builder: (context) =>
-                                      //             const Homepage()));
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const Homepage()));
                                     },
                                     child: const Text('Log In'))
                           ],
