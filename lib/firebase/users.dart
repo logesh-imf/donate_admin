@@ -7,7 +7,6 @@ class AllUsersFirebase extends ChangeNotifier {
   bool get isLoading => load;
 
   List<UserDetails> allusers = [];
-  List<ListTile> usersTiles = [];
 
   Future getAllUsers() async {
     try {

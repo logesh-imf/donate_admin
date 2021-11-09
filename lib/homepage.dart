@@ -42,7 +42,7 @@ class _HomepageState extends State<Homepage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              width: 160,
+              width: 250,
               color: Colors.grey[350],
               child: Column(
                 children: [
