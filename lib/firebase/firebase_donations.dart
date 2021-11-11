@@ -1,6 +1,5 @@
 import 'package:donate_admin/class/donations.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
 
 class FirebaseDonation {
   List<DonationDetails> donationDetails = [];
@@ -34,6 +33,7 @@ class FirebaseDonation {
               element['city'],
               element['description'],
               element['category'],
+              element['donated'],
               element.id,
               element['state'],
               imagesURLs),

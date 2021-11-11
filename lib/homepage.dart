@@ -47,6 +47,16 @@ class _HomepageState extends State<Homepage> {
               child: Column(
                 children: [
                   Container(
+                    height: 30,
+                    width: 250,
+                    color: Colors.grey,
+                    child: const Center(
+                        child: Text(
+                      'All Details',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    )),
+                  ),
+                  Container(
                     height: 40,
                     color: (activePage == 0) ? Colors.white : Colors.grey[350],
                     child: Row(
@@ -151,6 +161,96 @@ class _HomepageState extends State<Homepage> {
                             ))
                       ],
                     ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Container(
+                    height: 30,
+                    width: 250,
+                    color: Colors.grey,
+                    child: const Center(
+                        child: Text(
+                      'Completed',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    )),
+                  ),
+                  Container(
+                    height: 40,
+                    color: (activePage == 3) ? Colors.white : Colors.grey[350],
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 40,
+                          width: 40,
+                          color: (activePage == 3)
+                              ? Design.backgroundColor
+                              : Colors.grey[400],
+                          child: Icon(Icons.volunteer_activism,
+                              color: (activePage == 3)
+                                  ? Colors.white
+                                  : Colors.black),
+                        ),
+                        const SizedBox(width: 10),
+                        TextButton(
+                            onPressed: () {
+                              setState(() {
+                                activePage = 3;
+                              });
+                            },
+                            child: Container(
+                              child: Text(
+                                'Donations',
+                                style: TextStyle(
+                                    color: (activePage == 3)
+                                        ? Design.backgroundColor
+                                        : Colors.black),
+                              ),
+                            ))
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 40,
+                    color: (activePage == 4) ? Colors.white : Colors.grey[350],
+                    child: Row(
+                      children: [
+                        Container(
+                            height: 40,
+                            width: 40,
+                            color: (activePage == 4)
+                                ? Design.backgroundColor
+                                : Colors.grey[400],
+                            child: Center(
+                                child: FaIcon(FontAwesomeIcons.handsHelping,
+                                    color: (activePage == 4)
+                                        ? Colors.white
+                                        : Colors.black))),
+                        const SizedBox(width: 10),
+                        TextButton(
+                            onPressed: () {
+                              setState(() {
+                                activePage = 4;
+                              });
+                            },
+                            child: Container(
+                              child: Text(
+                                'Requests',
+                                style: TextStyle(
+                                    color: (activePage == 4)
+                                        ? Design.backgroundColor
+                                        : Colors.black),
+                              ),
+                            ))
+                      ],
+                    ),
+                  ),
+                  const Spacer(),
+                  Container(
+                    child: Text('Welcome Admin'),
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                 ],
               ),
